@@ -1,0 +1,9 @@
+CREATE TABLE `pais` (
+  `codPais` int(11) NOT NULL COMMENT 'Codigo País',
+  `nomPais` varchar(30) DEFAULT NULL COMMENT 'Nombre Pais',
+  `usuActividad` char(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codPais`),
+  UNIQUE KEY `codPais_UNIQUE` (`codPais`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Pais'

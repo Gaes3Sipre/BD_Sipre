@@ -1,0 +1,19 @@
+CREATE TABLE `dat_empleado` (
+  `codEmpleado` int(11) NOT NULL COMMENT 'Codigo Empleado',
+  `numContrato` int(11) NOT NULL COMMENT 'Numero de Contrato',
+  `munNacimiento` int(11) NOT NULL COMMENT 'Municipio Nacimiento',
+  `fechNacimiento` date NOT NULL COMMENT 'Fecha de Nacimiento',
+  `tipContrato` char(1) NOT NULL COMMENT 'Tipo Contrato',
+  `indActividad` char(1) NOT NULL COMMENT 'Indicador de Actividad',
+  `fechIniContrato` date NOT NULL COMMENT 'Fecha de Inicicio de contrato',
+  `fecFinContrato` date NOT NULL COMMENT 'Fecha Final de Contrato',
+  `sueBasico` int(11) NOT NULL COMMENT 'Sueldo Basico',
+  `actUsuario` int(15) NOT NULL COMMENT 'Actividad Usuario',
+  `actEstado` char(1) NOT NULL COMMENT 'Actividad Estado',
+  `actHora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Actividad Hora',
+  PRIMARY KEY (`codEmpleado`,`numContrato`),
+  UNIQUE KEY `codEmpl_UNIQUE` (`codEmpleado`),
+  KEY `FKmuni` (`munNacimiento`),
+  CONSTRAINT `FKmuni` FOREIGN KEY (`munNacimiento`) REFERENCES `municipio` (`codMunicipio`),
+  CONSTRAINT `fk_biTerc` FOREIGN KEY (`codEmpleado`) REFERENCES `dat_terceros` (`codTerc`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='datos Empleado'

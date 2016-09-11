@@ -1,0 +1,11 @@
+CREATE TABLE `gn_tipodocumentosadjuntos` (
+  `codTipDocumentos` int(11) NOT NULL COMMENT 'Codigo Tipo de Documento',
+  `codPrograma` int(11) NOT NULL COMMENT 'codigo Programa donde se puede abjuntar este tipo de documento',
+  `nomDocumento` int(11) NOT NULL COMMENT 'Nombre de Documento',
+  `usuActividad` int(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora actividad',
+  PRIMARY KEY (`codTipDocumentos`,`codPrograma`),
+  KEY `fkprogramas_idx` (`codPrograma`),
+  CONSTRAINT `fkprogramas` FOREIGN KEY (`codPrograma`) REFERENCES `gn_programassistema` (`codPrograma`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tipo de Documentos adjuntos'

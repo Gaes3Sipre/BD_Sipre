@@ -1,0 +1,9 @@
+CREATE TABLE `gn_menu` (
+  `codMenu` int(11) NOT NULL COMMENT 'Codigo Menu',
+  `nomMenu` varchar(40) NOT NULL COMMENT 'NOmbre Menu',
+  `usuActividad` int(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codMenu`),
+  UNIQUE KEY `codMenu_UNIQUE` (`codMenu`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Menu'

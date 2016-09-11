@@ -1,0 +1,12 @@
+CREATE TABLE `gn_departamento` (
+  `codDepartamento` int(11) NOT NULL COMMENT 'Codigo Departemento',
+  `codPais` int(11) NOT NULL COMMENT 'Codigo Pais',
+  `nomDepartamento` varchar(30) DEFAULT NULL COMMENT 'Nombre Departamento',
+  `usuActividad` char(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codDepartamento`),
+  UNIQUE KEY `codPais_UNIQUE` (`codDepartamento`),
+  KEY `FKpais` (`codPais`),
+  CONSTRAINT `FKpais` FOREIGN KEY (`codPais`) REFERENCES `gn_pais` (`codPais`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Departamento'

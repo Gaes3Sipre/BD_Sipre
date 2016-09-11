@@ -1,0 +1,10 @@
+CREATE TABLE `gn_roles` (
+  `codRol` int(11) NOT NULL COMMENT 'Codigo Rol',
+  `nomRol` varchar(20) NOT NULL COMMENT 'Nombre Rol',
+  `TipRol` char(1) NOT NULL COMMENT 'Tipo Rol',
+  `usuActividad` int(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codRol`),
+  UNIQUE KEY `codRoll_UNIQUE` (`codRol`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Roles'

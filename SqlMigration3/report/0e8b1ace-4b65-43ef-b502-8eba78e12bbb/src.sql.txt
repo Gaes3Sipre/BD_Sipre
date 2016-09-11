@@ -1,0 +1,13 @@
+CREATE TABLE `dat_proveedor` (
+  `codProveedor` int(11) NOT NULL COMMENT 'Codigo Proveedor',
+  `tipProveedor` char(1) NOT NULL COMMENT 'Tipo de Proveedor',
+  `indActividad` char(1) NOT NULL COMMENT 'Indicador de Actividad',
+  `fecInicio` date NOT NULL COMMENT 'Fecha de Inicio',
+  `fecFinal` date NOT NULL COMMENT 'Fecha Fin',
+  `actUsuario` int(15) NOT NULL COMMENT 'Actividad Usuario',
+  `actEstado` char(1) NOT NULL COMMENT 'Actividad Estado',
+  `actHora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Actividad Hora',
+  PRIMARY KEY (`codProveedor`),
+  UNIQUE KEY `idprDatob_UNIQUE` (`codProveedor`),
+  CONSTRAINT `FKtecer_prove` FOREIGN KEY (`codProveedor`) REFERENCES `dat_terceros` (`codTerc`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Datos Proveedor'

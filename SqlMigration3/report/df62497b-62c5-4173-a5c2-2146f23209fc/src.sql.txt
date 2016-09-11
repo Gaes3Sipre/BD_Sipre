@@ -1,0 +1,19 @@
+CREATE TABLE `be_tipobeneficio` (
+  `codServicio` int(11) NOT NULL COMMENT 'Codigo Servicio',
+  `codProveedor` int(11) NOT NULL COMMENT 'Codigo Proveedor',
+  `codTipServicio` int(11) NOT NULL COMMENT 'Codigo Tipo de Servicio',
+  `tipContrato` char(1) NOT NULL COMMENT 'Tipo de Contrato',
+  `indActividad` char(1) DEFAULT NULL COMMENT 'Indicador de Actividad',
+  `afePrescipciones` char(1) DEFAULT NULL COMMENT 'Afecta Prescipciones',
+  `porEmpleado` double NOT NULL COMMENT 'Porcentaje Empleado',
+  `porEmpresa` double NOT NULL COMMENT 'Porcentaje Empresa',
+  `actUsuario` varchar(15) NOT NULL COMMENT 'Actividad Usuario',
+  `actEstado` char(1) NOT NULL COMMENT 'Actividad Estado',
+  `actHora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'actividad Hora',
+  PRIMARY KEY (`codServicio`,`tipContrato`,`codProveedor`,`codTipServicio`),
+  UNIQUE KEY `codServ_UNIQUE` (`codServicio`),
+  KEY `fkbetser_idx` (`codTipServicio`),
+  KEY `fkprdatob_idx` (`codProveedor`),
+  CONSTRAINT `fkbetser` FOREIGN KEY (`codTipServicio`) REFERENCES `be_tiposervicio` (`codTipServicio`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fkprdatob` FOREIGN KEY (`codProveedor`) REFERENCES `bi_datosproveedor` (`codProveedor`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tipo de Beneficio'

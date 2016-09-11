@@ -1,0 +1,12 @@
+CREATE TABLE `tip_servicio` (
+  `codTipServicio` int(11) NOT NULL COMMENT 'Codigo Tipo de Servicio',
+  `nomServicio` varchar(20) NOT NULL COMMENT 'Nombre de Servicio',
+  `indActividad` char(1) NOT NULL COMMENT 'Indicador de Actividad',
+  `natuServicio` char(1) NOT NULL COMMENT 'Naturaleza Servicio (P-pago, D-descuento)',
+  `factura` char(1) NOT NULL COMMENT 'Factura si o no',
+  `usuActividad` int(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codTipServicio`),
+  UNIQUE KEY `codTser_UNIQUE` (`codTipServicio`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tipo de Servicio'

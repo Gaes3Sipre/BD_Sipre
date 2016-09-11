@@ -1,0 +1,21 @@
+CREATE TABLE `pe_detallepresupuesto` (
+  `codDetPresupuesto` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Codigo Detalle Presupuesto',
+  `codPresupuesto` int(11) NOT NULL COMMENT 'Codigo Presupuesto',
+  `codFactura` int(11) NOT NULL COMMENT 'Codigo Factura',
+  `codProveedor` int(11) NOT NULL COMMENT 'Codigo Proveedor',
+  `codTomador` int(11) NOT NULL COMMENT 'Codigo Tomador',
+  `valEmpresa` double NOT NULL COMMENT 'Valor Empresa',
+  `usuActividad` varchar(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codDetPresupuesto`),
+  UNIQUE KEY `codDpre_UNIQUE` (`codDetPresupuesto`),
+  KEY `fkpresupuesto_idx` (`codPresupuesto`),
+  KEY `fkfactura_idx` (`codFactura`,`codTomador`,`codProveedor`),
+  KEY `fkCODprovee` (`codProveedor`),
+  KEY `FK_pedeta_besoli` (`codTomador`),
+  CONSTRAINT `FK` FOREIGN KEY (`codFactura`) REFERENCES `pr_facturacionproveedor` (`codFactura`),
+  CONSTRAINT `FK4pres` FOREIGN KEY (`codPresupuesto`) REFERENCES `pe_asignacionpresupuesto` (`codPresupuesto`),
+  CONSTRAINT `FK4tercero` FOREIGN KEY (`codTomador`) REFERENCES `be_solicitudbeneficios` (`codTomador`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fkCODprovee` FOREIGN KEY (`codProveedor`) REFERENCES `be_solicitudbeneficios` (`codProveedor`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=132 DEFAULT CHARSET=utf8 COMMENT='Detalle Presupuesto'

@@ -1,0 +1,109 @@
+<html> <head> <META http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" /> <link rel=stylesheet HREF="../textstyles.css" type="text/css">   <title>{0}({1})</title> <script type='text/javascript' src='../global.js'></script><script src='../js/jquery-1.11.1.min.js' type='text/javascript'></script></head><body><div display='no'><span id='prevProblem' onclick='prevProblem()'></span><span id='nextProblem' onclick='nextProblem()'></span><span id='prevSibling' onclick='prevSibling()'></span><span id='nextSibling' onclick='nextSibling1()'></span><span id='prevBookmark' onclick='prevBookmark()'></span><span id='nextBookmark' onclick='nextBookmark()'></span><span id='clearBookmarks' onclick='clearBookmarks()'></span></div><div class='unselectedDiv1' ID='a40c84109-4a42-4c7b-aad4-39264c3f9e5f' onclick='refl("a460c7af4-af2e-425b-9f11-f5192759e7ba||67462487-a48a-4569-a3f3-49634ecbee4e");oc(event,"a40c84109-4a42-4c7b-aad4-39264c3f9e5f"); '  ><div class='unselectedDiv2' ID='abdc23c53-566a-4f3c-9f6e-a93e962567a8' onclick='refl("a410538e7-85d9-43b9-8a8f-513f7048af49");oc(event,"abdc23c53-566a-4f3c-9f6e-a93e962567a8"); '  ><err category = '2'/><span class='errMessage' ><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;&nbsp;1</code>
+/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;&nbsp;2</code>
+*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;&nbsp;3</code>
+*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT = 'Datos Terceros'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;&nbsp;4</code>
+*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;&nbsp;5</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;&nbsp;6</code>
+CREATE TABLE <span class='local' ID="acf649821-eafe-4562-aa7f-3d369a05a3e3"  >dbo</span>.<span class='local' ID="aa0c1e609-0e67-443b-b89a-658411552bb4"  >dat_terceros</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;&nbsp;7</code>
+(<err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;&nbsp;8</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;&nbsp;9</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;10</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Codigo Tercero'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;11</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;12</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;13</code>
+<em class='pl'></em><span class='local' ID="a87e18b0e-9f67-4397-9fe2-141d87d5ff2d"  >codTerc</span><span class='local' > </span><span class='local' ID="a3f18751f-d2d5-43b6-a735-26602a82e201"  >int</span><span class='local' > </span><span class='local' >NOT NULL</span><span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;14</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;15</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;16</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Tipo de Tercero <br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;17</code>
+<em class='pl'></em>*   -P Proveedor <br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;18</code>
+<em class='pl'></em>*   -E Empleado <br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;19</code>
+<em class='pl'></em>*   -B Beneficiario '.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;20</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;21</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;22</code>
+<em class='pl'></em><span class='local' ID="aca6e3c68-5644-4539-8e9d-cbe1ee70b8b2"  >tipTerc</span><span class='local' > </span><span class='local' ID="a668a302e-11c9-4be7-be90-8927e9c470ff"  >nchar(1)</span><span class='local' > </span><span class='local' >NOT NULL</span><span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;23</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;24</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;25</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Tipo de Identificacion:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;26</code>
+<em class='pl'></em>*   1. C cedula de ciudadania<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;27</code>
+<em class='pl'></em>*   2. E Cedula de Extranjeria<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;28</code>
+<em class='pl'></em>*   3. T Tarjeta de Identidad<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;29</code>
+<em class='pl'></em>*   5. N Nit <br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;30</code>
+<em class='pl'></em>*   6. R Rut<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;31</code>
+<em class='pl'></em>*   7. RC Registro civil'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;32</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;33</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;34</code>
+<em class='pl'></em><span class='local' ID="aa861979c-9a13-4841-83d9-e6ed256dfa5e"  >tipIdent</span><span class='local' > </span><span class='local' ID="a4f6b024c-c7fb-494f-a5db-193310c7e9f2"  >nchar(2)</span><span class='local' > </span><span class='local' >NOT NULL</span><span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;35</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;36</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;37</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Primer Nombre'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;38</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;39</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;40</code>
+<em class='pl'></em><span class='local' ID="adad17434-5a3f-4e7f-874d-95133f95902e"  >priNombre</span><span class='local' > </span><span class='local' ID="a076c13c0-e34a-44a9-b379-17ddf1b690d0"  >nvarchar(20)</span><span class='local' > </span><span class='local' >NOT NULL</span><span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;41</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;42</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;43</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Segundo Nombre'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;44</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;45</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;46</code>
+<em class='pl'></em><span class='local' ID="a54dc7e49-b215-47b4-9e7a-5942e4edb5e7"  >segNombre</span><span class='local' > </span><span class='local' ID="a94c92867-5baa-4ab8-a3a9-e9faf51a48b2"  >nvarchar(20)</span><span class='local' > </span><span class='local' >NULL</span><span class='local' > </span>DEFAULT NULL<span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;47</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;48</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;49</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Primer Apellido'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;50</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;51</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;52</code>
+<em class='pl'></em><span class='local' ID="a7feba51d-3d3f-4766-839a-63af690e3af3"  >priApellido</span><span class='local' > </span><span class='local' ID="a3919c504-aa54-4910-b234-4bde20320437"  >nvarchar(20)</span><span class='local' > </span><span class='local' >NOT NULL</span><span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;53</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;54</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;55</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Segundo Apellido'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;56</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;57</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;58</code>
+<em class='pl'></em><span class='local' ID="a1852c8be-399e-4367-aa7d-5a6271406429"  >segApellido</span><span class='local' > </span><span class='local' ID="a59124ad6-7d11-4acd-a4e9-26fe5fcd0106"  >nvarchar(20)</span><span class='local' > </span><span class='local' >NULL</span><span class='local' > </span>DEFAULT NULL<span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;59</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;60</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;61</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Codigo Municipio'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;62</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;63</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;64</code>
+<em class='pl'></em><span class='local' ID="ab8a26206-9a58-4477-b9e7-49a309a80eda"  >codMunicipio</span><span class='local' > </span><span class='local' ID="a7c2828d8-5875-40b3-8eda-b2cb7f73c336"  >int</span><span class='local' > </span><span class='local' >NOT NULL</span><span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;65</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;66</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;67</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Direccion residencia'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;68</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;69</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;70</code>
+<em class='pl'></em><span class='local' ID="a77d6e03c-98e9-4362-9176-6ec5e2a4a99d"  >dirResidencia</span><span class='local' > </span><span class='local' ID="adb300bfc-e018-4f81-af99-d7e254b3faad"  >nvarchar(15)</span><span class='local' > </span><span class='local' >NOT NULL</span><span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;71</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;72</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;73</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Telefono Residencia'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;74</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;75</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;76</code>
+<em class='pl'></em><span class='local' ID="a211d45d4-0bd5-4bc9-be10-1896c71425a5"  >telResidencia</span><span class='local' > </span><span class='local' ID="aa38b1570-b6cf-4988-bc0d-169b2f6e35f7"  >int</span><span class='local' > </span><span class='local' >NOT NULL</span><span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;77</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;78</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;79</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Correo Electronico'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;80</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;81</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;82</code>
+<em class='pl'></em><span class='local' ID="a9f570063-d489-4815-b180-fa73644a6115"  >corElectronico</span><span class='local' > </span><span class='local' ID="a09305751-cb2e-44fb-8216-b450886228c2"  >nvarchar(45)</span><span class='local' > </span><span class='local' >NOT NULL</span><span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;83</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;84</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;85</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Actividad Usuario'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;86</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;87</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;88</code>
+<em class='pl'></em><span class='local' ID="ae9c12f9c-6e3e-4009-a1fc-2f5021dc3b52"  >actUsuario</span><span class='local' > </span><span class='local' ID="a21f7689e-8775-4cc3-99e4-316502e6aef0"  >int</span><span class='local' > </span><span class='local' >NOT NULL</span><span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;89</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;90</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;91</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Actividad Estado'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;92</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;93</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;94</code>
+<em class='pl'></em><span class='local' ID="a24c8a63d-4cf0-4248-941b-a28fdca9796a"  >actEsta</span><span class='local' > </span><span class='local' ID="af45f5425-c4af-4929-b9cd-9e4a4b7378ad"  >nchar(1)</span><span class='local' > </span><span class='local' >NOT NULL</span><span class='local' >, </span><err category = '2'/><span class='errMessage' ><br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;95</code>
+<em class='pl'></em>/*<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;96</code>
+<em class='pl'></em>*   SSMA informational messages:<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;97</code>
+<em class='pl'></em>*   M2SS0003: The following SQL clause was ignored during conversion: COMMENT 'Actividad Hora'.<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;98</code>
+<em class='pl'></em>*/<br><code><img class='bookmark' src='../img/empty.gif'  />&nbsp;99</code>
+</span><br><code><img class='bookmark' src='../img/empty.gif'  />100</code>
+<em class='pl'></em><span class='local' ID="a794f4147-9442-4431-90c7-9b506d4e378d"  >actHora</span><span class='local' > </span><span class='local' ID="ad85b3291-b9de-48b2-8bb9-be1c9f081770"  >datetime</span><span class='local' > </span><span class='local' >NOT NULL</span><span class='local' > </span>DEFAULT <span class='local' ID="a822ab95e-7165-4dac-80d0-600edd69b5c4"  >getdate()</span><span class='local' >, </span><span class='unselectedSpan' ID='acef91b57-8d1b-45eb-b207-26bc75c141a4' onclick='refl("a7936ef9c-fd4c-4e9b-8594-6175821972cd");oc(event,"acef91b57-8d1b-45eb-b207-26bc75c141a4"); '  ><br><code><img class='bookmark' src='../img/empty.gif'  />101</code>
+<em class='pl'></em>CONSTRAINT <span class='local' ID="a4b864e61-7be0-40f1-8de6-37424e8460b7"  >PK_dat_terceros_codTerc</span><span class='local' > </span>PRIMARY KEY (<span class='local' ID="a23b3b20d-35ab-4127-92b8-ffdcebf884a4"  >codTerc</span>)</span><span class='local' >, </span><span class='unselectedSpan' ID='ac3cf0475-74ba-4189-ad38-7d5d003198ce' onclick='refl("aafd6d4fa-4b8c-458d-90d2-2f10e89d9d07");oc(event,"ac3cf0475-74ba-4189-ad38-7d5d003198ce"); '  ><br><code><img class='bookmark' src='../img/empty.gif'  />102</code>
+<em class='pl'></em>CONSTRAINT <span class='local' ID="a20071a92-eaff-447f-ade9-04d602b57fd6"  >dat_terceros$codTerc_UNIQUE</span><span class='local' > </span>UNIQUE (<span class='local' ID="a0eb1c7c3-d604-4d29-a2d3-d9222e85edea"  >codTerc</span>)</span><span class='local' >, </span><span class='unselectedSpan' ID='aaaca3116-79dd-4634-93c9-31aeeeeff294' onclick='refl("a28d4be42-d7df-4403-abad-9a851b2019e8");oc(event,"aaaca3116-79dd-4634-93c9-31aeeeeff294"); '  ><br><code><img class='bookmark' src='../img/empty.gif'  />103</code>
+<em class='pl'></em>CONSTRAINT <span class='local' ID="a1417ae79-24e5-4fb2-a275-770994c3ae59"  >dat_terceros$FKMUNITERC</span><span class='local' > </span>FOREIGN KEY (<span class='local' ID="aa6bb0496-98ef-4669-892f-a83fa1f6e7ef"  >codMunicipio</span>)<span class='local' > </span>REFERENCES <span class='local' ID="a5c998efa-ca3a-4897-8483-e9590ef3126b"  >dbo</span>.<span class='local' ID="a88be39c0-f6c7-4af2-82d3-1aec7023f903"  >municipio</span><span class='local' > </span>(<span class='local' ID="ade710d20-d247-4ef2-a34b-7f976675dc7f"  >codMunicipio</span>)</span><br><code><img class='bookmark' src='../img/empty.gif'  />104</code>
+)</div></div><code><img class='bookmark' src='../img/empty.gif'  />105</code>
+GO<div class='unselectedDiv1' ID='aaba8001e-009b-4995-acb7-d68dacb88c4a' onclick='oc("aaba8001e-009b-4995-acb7-d68dacb88c4a")'  ><code><img class='bookmark' src='../img/empty.gif'  />106</code>
+CREATE <span class='local' >NONCLUSTERED</span> INDEX <span class='local' ID="a132e2981-3e7e-4e14-9025-17a3f66cee4c"  >FKMUNITERC</span><br><code><img class='bookmark' src='../img/empty.gif'  />107</code>
+<em class='pl'></em>ON <span class='local' ID="a4d159ed7-95a8-4d23-b653-ee7ecf9aecbf"  >dbo</span>.<span class='local' ID="a6f7a384f-2f0f-4508-8a50-f04eeafbb1d9"  >dat_terceros</span><span class='local' > </span>(<span class='local' ID="ae44bad61-b6ea-4db4-9651-e62b2a05cc94"  >codMunicipio</span><span class='local' > </span><span class='local' >ASC</span>)</div><code><img class='bookmark' src='../img/empty.gif'  />108</code>
+GO</body></html>

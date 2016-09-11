@@ -1,0 +1,12 @@
+CREATE TABLE `pe_asignacionpresupuesto` (
+  `codPresupuesto` int(11) NOT NULL COMMENT 'Codigo Presupuesto',
+  `anoPresupuesto` int(11) NOT NULL COMMENT 'Año Presupuesto',
+  `valInicial` double NOT NULL COMMENT 'Valor Inicial',
+  `valEjecutado` double NOT NULL COMMENT 'Valor Ejecutado',
+  `valPendiente` double NOT NULL COMMENT 'Valor Pendiente',
+  `usuActividad` int(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codPresupuesto`),
+  UNIQUE KEY `codPres_UNIQUE` (`codPresupuesto`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Asignacion de Presupuesto'

@@ -1,0 +1,17 @@
+CREATE TABLE `pr_valoresservicioproveedor` (
+  `codValor` int(11) NOT NULL COMMENT 'Codigo Valor',
+  `codProveedor` int(11) NOT NULL COMMENT 'Codigo Proveedor',
+  `tipServicio` int(11) NOT NULL COMMENT 'Tipo de Servicio',
+  `observacion` text COMMENT 'Observacion',
+  `fecFinVigencia` date NOT NULL COMMENT 'Fecha Fin Vigencia',
+  `valServicio` double NOT NULL COMMENT 'valor Servicio',
+  `usuActividad` char(11) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora actividad',
+  PRIMARY KEY (`codValor`),
+  UNIQUE KEY `codValo_UNIQUE` (`codValor`),
+  KEY `FKproveedor` (`codProveedor`),
+  KEY `FKtservici` (`tipServicio`),
+  CONSTRAINT `FKproveedor` FOREIGN KEY (`codProveedor`) REFERENCES `bi_datosproveedor` (`codProveedor`),
+  CONSTRAINT `FKtservici` FOREIGN KEY (`tipServicio`) REFERENCES `be_tiposervicio` (`codTipServicio`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Valores Servicio Proveedor'

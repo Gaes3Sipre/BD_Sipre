@@ -1,0 +1,13 @@
+CREATE TABLE `docu_adjun_tercero` (
+  `codTercero` int(11) NOT NULL COMMENT 'Codigo Tercero',
+  `codDocumento` int(11) NOT NULL COMMENT 'Codigo Documento',
+  `rutArchivo` int(11) NOT NULL COMMENT 'Ruta Archivo',
+  `tipDocumento` int(11) NOT NULL COMMENT 'Tipo Documento',
+  `usuActividad` int(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codTercero`,`codDocumento`),
+  KEY `fktipdocum_idx` (`codDocumento`),
+  CONSTRAINT `fktercero` FOREIGN KEY (`codTercero`) REFERENCES `dat_terceros` (`codTerc`),
+  CONSTRAINT `fktipdocum` FOREIGN KEY (`codDocumento`) REFERENCES `tip_doc_adjuntos` (`codTipDocumentos`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Documentos adjuntos por Tercero'

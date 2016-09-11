@@ -1,0 +1,17 @@
+CREATE TABLE `gn_detallemenu` (
+  `codMenu` int(11) NOT NULL COMMENT 'Codigo Menú',
+  `codPrograma` int(11) NOT NULL COMMENT 'Codigo Programa',
+  `codRol` int(11) NOT NULL COMMENT 'Codigo Rol',
+  `usuActividad` int(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codMenu`,`codRol`),
+  UNIQUE KEY `codMenu_UNIQUE` (`codMenu`),
+  UNIQUE KEY `codRolu_UNIQUE` (`codRol`),
+  KEY `fkprograma_idx` (`codPrograma`),
+  CONSTRAINT `fkmenu` FOREIGN KEY (`codMenu`) REFERENCES `gn_menu` (`codMenu`),
+  CONSTRAINT `fkmenu1` FOREIGN KEY (`codMenu`) REFERENCES `gn_menu` (`codMenu`),
+  CONSTRAINT `fkprograma` FOREIGN KEY (`codPrograma`) REFERENCES `gn_programassistema` (`codPrograma`),
+  CONSTRAINT `fkprograma1` FOREIGN KEY (`codPrograma`) REFERENCES `gn_programassistema` (`codPrograma`),
+  CONSTRAINT `fkroll` FOREIGN KEY (`codRol`) REFERENCES `gn_roles` (`codRol`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Detalle Menu'

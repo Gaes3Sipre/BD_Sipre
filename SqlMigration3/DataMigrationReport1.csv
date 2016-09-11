@@ -1,0 +1,23 @@
+Status	From-Table	To-Table	Total-Rows	Migrated-Rows	Success-Rate	Duration(DD:HH:MM:SS:MS)	Error-Messages
+Completed	sipre.be_tiposervicio	sipre.dbo.be_tiposervicio	55	55	100,00%	00:00:05:12:187	
+Completed	sipre.gn_menu	sipre.dbo.gn_menu	6	6	100,00%	00:00:00:48:411	
+Completed	sipre.gn_pais	sipre.dbo.gn_pais	1	1	100,00%	00:00:00:29:884	
+Completed	sipre.gn_programassistema	sipre.dbo.gn_programassistema	0	0	100,00%	00:00:00:22:437	
+Completed	sipre.gn_roles	sipre.dbo.gn_roles	4	4	100,00%	00:00:00:42:900	
+Completed	sipre.gn_usuarios	sipre.dbo.gn_usuarios	3	3	100,00%	00:00:00:37:944	
+Completed	sipre.pe_asignacionpresupuesto	sipre.dbo.pe_asignacionpresupuesto	5	5	100,00%	00:00:00:59:575	
+Completed	sipre.be_solicitudbeneficios	sipre.dbo.be_solicitudbeneficios	34	34	100,00%	00:00:04:14:767	
+Completed	sipre.be_tipobeneficio	sipre.dbo.be_tipobeneficio	30	30	100,00%	00:00:04:14:718	
+Completed	sipre.bi_beneficiariosempleados	sipre.dbo.bi_beneficiariosempleados	100	100	100,00%	00:00:07:58:099	
+Completed	sipre.bi_datosempleado	sipre.dbo.bi_datosempleado	152	0	0,00%	00:00:09:38:151	La columna 'fecFinContrato' no admite DBNull.Value.
+Completed	sipre.bi_datosproveedor	sipre.dbo.bi_datosproveedor	71	71	100,00%	00:00:05:37:404	
+Completed	sipre.bi_datosterceros	sipre.dbo.bi_datosterceros	288	288	100,00%	00:00:14:44:124	
+Completed	sipre.gn_departamento	sipre.dbo.gn_departamento	29	0	0,00%	00:00:02:38:649	La columna 'horActividad' no admite DBNull.Value.
+Completed	sipre.gn_detallemenu	sipre.dbo.gn_detallemenu	0	0	100,00%	00:00:00:22:303	
+Completed	sipre.gn_detallerol	sipre.dbo.gn_detallerol	3	3	100,00%	00:00:00:37:220	
+Completed	sipre.gn_documentosadjuntostercero	sipre.dbo.gn_documentosadjuntostercero	0	0	100,00%	00:00:00:18:302	
+Completed	sipre.gn_municipio	sipre.dbo.gn_municipio	629	0	0,00%	00:00:15:09:812	La columna 'horActividad' no admite DBNull.Value.
+Completed	sipre.gn_tipodocumentosadjuntos	sipre.dbo.gn_tipodocumentosadjuntos	0	0	100,00%	00:00:00:22:535	
+Completed	sipre.pe_detallepresupuesto	sipre.dbo.pe_detallepresupuesto	5	5	100,00%	00:00:01:04:273	
+Completed	sipre.pr_facturacionproveedor	sipre.dbo.pr_facturacionproveedor	2	2	100,00%	00:00:00:39:034	
+Completed	sipre.pr_valoresservicioproveedor	sipre.dbo.pr_valoresservicioproveedor	71	71	100,00%	00:00:06:10:189	

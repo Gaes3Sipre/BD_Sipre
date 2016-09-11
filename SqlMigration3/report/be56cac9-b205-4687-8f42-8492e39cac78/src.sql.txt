@@ -1,0 +1,13 @@
+CREATE TABLE `municipio` (
+  `codMunicipio` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Codigo Municipio',
+  `codDepartamento` int(11) NOT NULL COMMENT 'Codigo Departamento',
+  `codSuip` int(11) NOT NULL COMMENT 'Codigo Siup',
+  `nomMunicipio` varchar(30) DEFAULT NULL COMMENT 'Nombre MUnicipio',
+  `usuActividad` char(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codMunicipio`),
+  UNIQUE KEY `codPais_UNIQUE` (`codMunicipio`),
+  KEY `FKmunicipio` (`codDepartamento`),
+  CONSTRAINT `FKmunicipio` FOREIGN KEY (`codDepartamento`) REFERENCES `departamento` (`codDepartamento`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=630 DEFAULT CHARSET=utf8 COMMENT='municipio'

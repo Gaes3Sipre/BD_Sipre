@@ -1,0 +1,12 @@
+CREATE TABLE `det_rol` (
+  `codRol` int(11) NOT NULL COMMENT 'Codigo Rol',
+  `codUsuario` char(15) NOT NULL COMMENT 'Codigo Usuario',
+  `usuActividad` int(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codRol`),
+  UNIQUE KEY `codRolu_UNIQUE` (`codRol`),
+  KEY `fkusuar` (`codUsuario`),
+  CONSTRAINT `fkrol` FOREIGN KEY (`codRol`) REFERENCES `roles` (`codRol`),
+  CONSTRAINT `fkusuar` FOREIGN KEY (`codUsuario`) REFERENCES `usuarios` (`codUsuaario`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Detalle Rol'

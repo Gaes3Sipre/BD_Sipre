@@ -1,0 +1,16 @@
+CREATE TABLE `fac_proveedor` (
+  `codFactura` int(11) NOT NULL COMMENT 'Codigo de Factura',
+  `codServicio` int(11) NOT NULL COMMENT 'Codigo de Servicio',
+  `codProveedor` int(11) NOT NULL COMMENT 'Codigo Proveedor',
+  `valEmpleado` double NOT NULL COMMENT 'valor empleado',
+  `valEmpresa` double NOT NULL COMMENT 'valor empresa',
+  `usuActividad` int(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codFactura`),
+  UNIQUE KEY `codFact_UNIQUE` (`codFactura`),
+  KEY `fkbesoli_idx` (`codProveedor`),
+  KEY `fkbetipbe_idx` (`codServicio`),
+  CONSTRAINT `FKservicio` FOREIGN KEY (`codServicio`) REFERENCES `tip_beneficio` (`codServicio`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fkprov` FOREIGN KEY (`codProveedor`) REFERENCES `dat_proveedor` (`codProveedor`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Facturacion Proveedor'

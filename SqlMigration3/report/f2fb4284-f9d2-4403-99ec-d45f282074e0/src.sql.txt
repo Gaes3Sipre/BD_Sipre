@@ -1,0 +1,19 @@
+CREATE TABLE `sol_beneficios` (
+  `codSoli` int(11) NOT NULL AUTO_INCREMENT COMMENT 'codigo solicitud',
+  `codProveedor` int(11) NOT NULL DEFAULT '0' COMMENT 'codigo proveedor',
+  `codTomador` int(11) NOT NULL DEFAULT '0' COMMENT 'codigo tomador',
+  `estSolicitud` char(1) NOT NULL DEFAULT '0' COMMENT 'estado solicitud',
+  `fecSolicitud` date NOT NULL COMMENT 'fecha solicitud',
+  `codservicios` int(11) NOT NULL DEFAULT '0' COMMENT 'codigo servicios',
+  `observaciones` varchar(255) NOT NULL DEFAULT '0' COMMENT 'observaciones',
+  `usuActividad` int(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codSoli`),
+  KEY `FKproveedoress` (`codProveedor`),
+  KEY `FKcodser` (`codservicios`),
+  KEY `FKTERCE` (`codTomador`),
+  CONSTRAINT `FKTERCE` FOREIGN KEY (`codTomador`) REFERENCES `dat_terceros` (`codTerc`),
+  CONSTRAINT `FKcodser` FOREIGN KEY (`codservicios`) REFERENCES `tip_beneficio` (`codServicio`),
+  CONSTRAINT `FKproveedoress` FOREIGN KEY (`codProveedor`) REFERENCES `dat_proveedor` (`codProveedor`)
+) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=utf8 COMMENT='solicitud de beneficios'

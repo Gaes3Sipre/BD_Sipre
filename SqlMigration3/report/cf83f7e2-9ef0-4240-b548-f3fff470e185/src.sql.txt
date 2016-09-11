@@ -1,0 +1,20 @@
+CREATE TABLE `dat_terceros` (
+  `codTerc` int(11) NOT NULL COMMENT 'Codigo Tercero',
+  `tipTerc` char(1) NOT NULL COMMENT 'Tipo de Tercero \n-P Proveedor \n-E Empleado \n-B Beneficiario ',
+  `tipIdent` char(2) NOT NULL COMMENT 'Tipo de Identificacion:\n1. C cedula de ciudadania\n2. E Cedula de Extranjeria\n3. T Tarjeta de Identidad\n5. N Nit \n6. R Rut\n7. RC Registro civil',
+  `priNombre` varchar(20) NOT NULL COMMENT 'Primer Nombre',
+  `segNombre` varchar(20) DEFAULT NULL COMMENT 'Segundo Nombre',
+  `priApellido` varchar(20) NOT NULL COMMENT 'Primer Apellido',
+  `segApellido` varchar(20) DEFAULT NULL COMMENT 'Segundo Apellido',
+  `codMunicipio` int(11) NOT NULL COMMENT 'Codigo Municipio',
+  `dirResidencia` varchar(15) NOT NULL COMMENT 'Direccion residencia',
+  `telResidencia` int(11) NOT NULL COMMENT 'Telefono Residencia',
+  `corElectronico` varchar(45) NOT NULL COMMENT 'Correo Electronico',
+  `actUsuario` int(15) NOT NULL COMMENT 'Actividad Usuario',
+  `actEsta` char(1) NOT NULL COMMENT 'Actividad Estado',
+  `actHora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Actividad Hora',
+  PRIMARY KEY (`codTerc`),
+  UNIQUE KEY `codTerc_UNIQUE` (`codTerc`),
+  KEY `FKMUNITERC` (`codMunicipio`),
+  CONSTRAINT `FKMUNITERC` FOREIGN KEY (`codMunicipio`) REFERENCES `municipio` (`codMunicipio`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Datos Terceros'

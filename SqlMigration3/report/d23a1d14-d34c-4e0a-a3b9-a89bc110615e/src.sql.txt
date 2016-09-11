@@ -1,0 +1,10 @@
+CREATE TABLE `pro_sistema` (
+  `codPrograma` int(11) NOT NULL COMMENT 'Codigo Programa',
+  `nomPrograma` varchar(40) NOT NULL COMMENT 'Nombre Programa',
+  `dirPrograma` varchar(40) NOT NULL COMMENT 'Direccion Programa',
+  `usuActividad` int(15) NOT NULL COMMENT 'usuario actividad',
+  `tipActividad` char(1) NOT NULL COMMENT 'tipo actividad',
+  `horActividad` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'hora de la actividad',
+  PRIMARY KEY (`codPrograma`),
+  UNIQUE KEY `codProg_UNIQUE` (`codPrograma`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Programas del sistema'

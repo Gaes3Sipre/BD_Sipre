@@ -1,0 +1,19 @@
+CREATE TABLE `bi_beneficiariosempleados` (
+  `codEmpleado` int(11) NOT NULL COMMENT 'Codigo Empleado',
+  `codBeneficiario` int(11) NOT NULL COMMENT 'Codigo Beneficiario',
+  `tipBeneficio` char(1) NOT NULL COMMENT 'Tipo de Beneficio',
+  `munNacimiento` int(3) NOT NULL COMMENT 'Municipio Nacimiento',
+  `fechNacimiento` date NOT NULL COMMENT 'Fecha de Nacimiento',
+  `fechIniContrato` date NOT NULL COMMENT 'Fecha de Inicicio de contrato',
+  `fecFinContrato` date NOT NULL COMMENT 'Fecha Final de Contrato',
+  `actUsuario` int(15) NOT NULL COMMENT 'Actividad Usuario',
+  `estActividad` char(1) NOT NULL COMMENT 'Estado Actividad',
+  `actHora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Actividad Hora',
+  PRIMARY KEY (`codBeneficiario`),
+  UNIQUE KEY `codEmpl_UNIQUE` (`codEmpleado`),
+  UNIQUE KEY `codBenef_UNIQUE` (`codBeneficiario`),
+  KEY `FKmuninaci` (`munNacimiento`),
+  CONSTRAINT `FKmuninaci` FOREIGN KEY (`munNacimiento`) REFERENCES `gn_municipio` (`codMunicipio`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fkbiemple` FOREIGN KEY (`codEmpleado`) REFERENCES `bi_datosempleado` (`codEmpleado`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fkbiterce` FOREIGN KEY (`codBeneficiario`) REFERENCES `bi_datosterceros` (`codTerc`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Beneficiarios Empleados'
